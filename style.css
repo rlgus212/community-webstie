@@ -7,7 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -40,6 +41,19 @@ h1, h2 {
     border-radius: 5px;
 }
 
+.login-container .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.login-container .options a {
+    text-decoration: none;
+    color: #FF7043;
+}
+
 .login-container button {
     width: 100%;
     padding: 10px;
@@ -53,4 +67,37 @@ h1, h2 {
 
 .login-container button:hover {
     background-color: #e55e37;
+}
+
+/* 푸터 */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #FF7043;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p {
+    margin-top: 10px;
+    font-size: 0.8em;
 }

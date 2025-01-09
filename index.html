@@ -11,15 +11,32 @@
         <h1 class="logo">UniVerse</h1>
         <form id="loginForm">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter your username">
+            <input type="text" id="username" placeholder="Enter your username" required>
             
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="rememberMe">
+                    Remember Me
+                </label>
+                <a href="#" id="forgotPassword">Forgot Username/Password?</a>
+            </div>
             
             <button type="submit">Login</button>
         </form>
-        <button id="skipButton">Skip Login</button>
+        <button id="signupButton">Sign Up</button>
     </div>
+
+    <footer class="footer">
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>UniVerse © 2025 - All Rights Reserved</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
