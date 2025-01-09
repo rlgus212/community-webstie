@@ -56,7 +56,7 @@
 .nav-item.active::after {
     content: '';
     position: absolute;
-    bottom: -1px; /* 보라색 줄을 항목 바로 아래에 위치 */
+    bottom: -5px; /* 보라색 줄을 항목 바로 아래에 위치 */
     left: 0;
     right: 0;
     height: 3px;
