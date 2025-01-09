@@ -5,13 +5,41 @@ function navigate(pageId) {
     });
 
     // Show the selected page
-    document.getElementById(pageId).classList.add('active');
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+    } else {
+        console.error(`Page with ID "${pageId}" not found.`);
+    }
 
     // Update navigation link styles
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.nav-item').forEach(link => {
         link.classList.remove('active');
     });
 
     // Set active link
-    document.querySelector(`.nav-link[href="#${pageId}"]`).classList.add('active');
+    const activeLink = document.querySelector(`.nav-item[data-target="${pageId}"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    } else {
+        console.error(`Navigation link for page ID "${pageId}" not found.`);
+    }
 }
+
+// Event listener for navigation links
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', event => {
+        const pageId = item.getAttribute('data-target');
+        if (pageId) {
+            navigate(pageId);
+        } else {
+            console.error("Navigation link missing 'data-target' attribute.");
+        }
+    });
+});
+
+// Set the default active page on load
+window.addEventListener('DOMContentLoaded', () => {
+    const defaultPage = 'board'; // Set your default page ID here
+    navigate(defaultPage);
+});
