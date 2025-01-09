@@ -9,9 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10 30px;
+    padding: 10px 30px; /* px 추가 */
     border-bottom: 1px solid #ccc;
     z-index: 1000;
+    box-sizing: border-box; /* 패딩 포함 */
 }
 
 /* 로고 */
@@ -55,7 +56,7 @@
 .nav-item.active::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0; /* 보라색 줄을 항목 바로 아래에 위치 */
     left: 0;
     right: 0;
     height: 3px;
@@ -98,8 +99,11 @@
 /* 페이지 컨텐츠 */
 .page {
     display: none;
-    margin-top: 80px;
+    margin-top: 100px; /* 네비게이션 바와 내용 간격 */
     padding: 20px;
+    max-width: 1200px; /* 최대 폭 설정 */
+    margin-left: auto;
+    margin-right: auto; /* 수평 가운데 정렬 */
 }
 
 .page.active {
