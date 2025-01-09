@@ -1,24 +1,45 @@
+/* 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 20px;
-    background-color: #ffffff; /* 흰 배경 */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
-h1, h2 {
-    color: #FF7043; /* Coral Orange를 주요 텍스트 컬러로 */
-    margin-bottom: 20px;
+.navbar {
+    background-color: #FF7043;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
 }
 
 .form {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .form label {
     display: block;
     font-weight: bold;
-    margin: 10px 0 5px;
-    color: #FF7043; /* Coral Orange */
+    margin-bottom: 5px;
+    color: #FF7043;
 }
 
 .form input,
@@ -26,30 +47,46 @@ h1, h2 {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #FF7043; /* Coral Orange 테두리 */
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .form button {
-    padding: 10px 15px;
-    background-color: #FF7043; /* 버튼 배경색 */
-    color: #fff; /* 버튼 텍스트 흰색 */
+    padding: 10px 20px;
+    background-color: #FF7043;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .form button:hover {
-    background-color: #e55e37; /* Coral Orange의 어두운 음영 */
+    background-color: #e55e37;
 }
 
 .post {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
 }
 
-.post h3 {
-    color: #FF7043; /* Coral Orange 제목 */
+.delete-btn {
+    background-color: #e55e37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background-color: #FF7043;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
