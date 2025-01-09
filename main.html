@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main-style.css">
     <title>UniVerse</title>
+    <link rel="stylesheet" href="main-style.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-logo">UniVerse</div>
-        <ul class="navbar-links">
-            <li><a href="#board" class="nav-link active" onclick="navigate('board')">Board</a></li>
-            <li><a href="#schedule" class="nav-link" onclick="navigate('schedule')">Schedule</a></li>
-            <li><a href="#lectures" class="nav-link" onclick="navigate('lectures')">Lectures</a></li>
-            <li><a href="#market" class="nav-link" onclick="navigate('market')">Market</a></li>
-            <li><a href="#jobs" class="nav-link" onclick="navigate('jobs')">Jobs</a></li>
-            <li><a href="#events" class="nav-link" onclick="navigate('events')">Events</a></li>
-            <li><a href="#community" class="nav-link" onclick="navigate('community')">Community</a></li>
+        <div class="logo">UniVerse</div>
+        <ul class="nav-links">
+            <li class="nav-item" data-target="board">Board</li>
+            <li class="nav-item" data-target="schedule">Schedule</li>
+            <li class="nav-item" data-target="lectures">Lectures</li>
+            <li class="nav-item" data-target="market">Market</li>
+            <li class="nav-item" data-target="jobs">Jobs</li>
+            <li class="nav-item" data-target="events">Events</li>
+            <li class="nav-item" data-target="community">Community</li>
         </ul>
-        <div class="navbar-buttons">
+        <div class="auth-buttons">
             <button class="login-btn">Login</button>
             <button class="signup-btn">Sign Up</button>
         </div>
     </nav>
-    <div class="content" id="content">
+    <div class="content">
         <div id="board" class="page active">
             <h1>Board</h1>
             <p>Connect and communicate with your peers.</p>
