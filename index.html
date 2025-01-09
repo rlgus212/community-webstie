@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anonymous Community</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Welcome to the Anonymous Community</h1>
@@ -71,6 +72,33 @@
       // 입력칸 초기화
       postForm.reset();
     });
+    // 페이지 로드 시 저장된 게시물 불러오기
+const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+savedPosts.forEach(post => {
+  const postDiv = document.createElement('div');
+  postDiv.className = 'post';
+  postDiv.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+  postsDiv.appendChild(postDiv);
+});
+
+// 게시물 저장 기능
+postForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const title = document.getElementById('title').value;
+  const content = document.getElementById('content').value;
+
+  const post = { title, content };
+  savedPosts.push(post);
+  localStorage.setItem('posts', JSON.stringify(savedPosts));
+
+  const postDiv = document.createElement('div');
+  postDiv.className = 'post';
+  postDiv.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+  postsDiv.prepend(postDiv);
+
+  postForm.reset();
+});
   </script>
 </body>
 </html>
