@@ -1,86 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-}
-
+/* Navbar styles */
 .navbar {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1200;
-}
-
-.navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    height: 80px; /* Adjusted height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
+.navbar-logo {
     font-size: 1.5rem;
+    font-weight: bold;
     color: #6a0dad;
-    text-decoration: none;
 }
 
-.nav-links {
+.navbar-links {
+    list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-link {
+.navbar-links .nav-link {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.nav-link:hover {
-    color: #6a0dad;
+.navbar-links .nav-link:hover {
+    background-color: #f2f2f2;
 }
 
-.nav-link.active {
-    color: #6a0dad;
-    font-weight: bold;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.login-btn, .signup-btn {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-btn {
-    background-color: transparent;
-    color: #6a0dad;
-    border: 1px solid #6a0dad;
-}
-
-.signup-btn {
+.navbar-links .nav-link.active {
     background-color: #6a0dad;
     color: white;
 }
 
-.signup-btn:hover {
+.navbar-buttons .login-btn, .navbar-buttons .signup-btn {
+    border: 1px solid #6a0dad;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #6a0dad;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.navbar-buttons .signup-btn {
+    background-color: #6a0dad;
+    color: white;
+}
+
+.navbar-buttons .login-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.navbar-buttons .signup-btn:hover {
     background-color: #5e0099;
 }
 
+/* Page content styles */
 .content {
     max-width: 1200px;
-    margin: 100px auto 0;
+    margin: 20px auto;
     padding: 0 20px;
 }
 
