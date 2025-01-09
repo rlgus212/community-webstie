@@ -1,103 +1,106 @@
-/* 공통 스타일 */
-body {
-    font-family: Arial, sans-serif;
+/* Reset Styles */
+body, h1, p, ul, li, a, button, input {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body 스타일 */
+body {
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }
 
-h1, h2 {
-    color: #FF7043;
-}
-
-/* 로그인 화면 스타일 */
+/* Login 컨테이너 */
 .login-container {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
+/* Login 박스 */
+.login-box {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 로고 스타일 */
 .logo {
-    font-size: 2em;
+    font-size: 24px;
     font-weight: bold;
+    color: #FF7043;
+    margin-bottom: 30px;
+}
+
+/* Input 그룹 */
+.input-group {
     margin-bottom: 20px;
-    color: #FF7043;
 }
 
-.login-container input {
+.input-group input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-.login-container .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 0.9em;
-}
-
-.login-container .options a {
-    text-decoration: none;
-    color: #FF7043;
-}
-
-.login-container button {
+/* 버튼 스타일 */
+button {
     width: 100%;
-    padding: 10px;
-    background-color: #FF7043;
-    color: white;
+    padding: 12px;
+    font-size: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+.login-btn {
+    background-color: #FF7043;
+    color: #fff;
     margin-bottom: 10px;
 }
 
-.login-container button:hover {
+.login-btn:hover {
     background-color: #e55e37;
 }
 
-/* 푸터 */
-.footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #FF7043;
-    color: white;
-    width: 100%;
-    margin-top: auto;
+.skip-btn {
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-.footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 0;
+.skip-btn:hover {
+    background-color: #ddd;
 }
 
-.footer ul li {
-    display: inline;
+/* 링크 */
+.links {
+    margin-top: 20px;
+    font-size: 12px;
 }
 
-.footer ul li a {
+.links a {
+    color: #FF7043;
     text-decoration: none;
-    color: white;
+    display: block;
+    margin: 5px 0;
 }
 
-.footer p {
-    margin-top: 10px;
-    font-size: 0.8em;
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
 }
