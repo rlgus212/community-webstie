@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniVerse Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-page">
-        <header class="login-header">
-            <h1 class="logo">UniVerse</h1>
-        </header>
-        <main class="login-form">
-            <form>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="submit" class="login-button">Login</button>
-                <button type="button" class="signup-button">Sign Up</button>
-            </form>
-            <div class="help-links">
-                <label>
-                    <input type="checkbox"> Remember Me
-                </label>
-                <a href="#">Forgot Username/Password?</a>
-            </div>
-        </main>
-        <footer class="login-footer">
-            <p>Terms of Service | Privacy Policy | Contact Us</p>
-            <p>UniVerse © 2025 - All Rights Reserved</p>
-        </footer>
+    <div class="login-container">
+        <h1>UniVerse</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter your username">
+            <input type="password" id="password" placeholder="Enter your password">
+            <button type="submit">Login</button>
+            <button type="button" id="skipLogin">Skip Login</button>
+        </form>
     </div>
+    <footer class="footer">
+        <p>Terms of Service &nbsp; | &nbsp; Privacy Policy &nbsp; | &nbsp; Contact Us</p>
+        <p>UniVerse © 2025 - All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
