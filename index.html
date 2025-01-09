@@ -8,28 +8,26 @@
 </head>
 <body>
     <div class="login-container">
-        <div class="logo">
-            <h1>UniVerse</h1>
-        </div>
+        <h1 class="logo">UniVerse</h1>
         <form class="login-form">
-            <input type="text" placeholder="Enter your username">
-            <input type="password" placeholder="Enter your password">
-            <button type="submit">Login</button>
-        </form>
-        <div class="options">
-            <div>
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">Remember Me</label>
-                <a href="#" class="forgot">Forgot Username/Password?</a>
+            <input type="text" placeholder="Enter your username" class="input-field">
+            <input type="password" placeholder="Enter your password" class="input-field">
+            <div class="options">
+                <label>
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+                <a href="#" class="forgot-link">Forgot Username/Password?</a>
             </div>
+            <button type="button" class="login-btn">Login</button>
+            <button type="button" class="skip-btn">Skip Login</button>
+        </form>
+        <div class="footer-links">
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Contact Us</a>
         </div>
-        <div class="signup">
-            <button class="signup-btn">Sign Up</button>
-        </div>
-        <footer>
-            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
-            <p>UniVerse © 2025 - All Rights Reserved</p>
-        </footer>
+        <p class="footer-text">UniVerse © 2025 - All Rights Reserved</p>
     </div>
 </body>
 </html>

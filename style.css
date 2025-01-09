@@ -1,107 +1,108 @@
-/* 전체 페이지 스타일 */
+/* 전체 배경색 */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* 브라우저 기본 하얀색 배경 */
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* 로그인 컨테이너 */
 .login-container {
     width: 100%;
     max-width: 400px;
+    margin: 50px auto; /* 화면 중앙 정렬 */
     text-align: center;
 }
 
-/* 로고 */
-.logo h1 {
-    color: #6a0dad; /* 강렬하고 세련된 보라색 */
-    font-size: 28px;
+/* 로고 스타일 */
+.logo {
+    font-size: 36px;
     font-weight: bold;
+    color: #5A20CB; /* 세련된 보라색 */
+    margin-bottom: 30px;
+}
+
+/* 입력 필드 스타일 */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 옵션 (Remember Me & Forgot Password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
-/* 입력 필드 */
-.login-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-/* 로그인 버튼 */
-.login-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.login-form button:hover {
-    background-color: #5a009c;
-}
-
-/* 옵션 (아이디/비번 찾기, 체크박스) */
-.options {
-    text-align: left;
-    margin-top: 10px;
-}
-
-.options label {
-    font-size: 14px;
-    color: #555;
-}
-
-.options a.forgot {
-    font-size: 14px;
-    text-decoration: underline;
-    color: #6a0dad;
-    float: right;
-}
-
-/* 회원가입 버튼 */
-.signup {
-    margin-top: 20px;
-}
-
-.signup-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #eee;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.signup-btn:hover {
-    background-color: #ddd;
-}
-
-/* 푸터 */
-footer {
-    margin-top: 30px;
-    font-size: 12px;
-    color: #aaa;
-}
-
-footer a {
+.options .forgot-link {
+    color: #5A20CB; /* 보라색 강조 */
     text-decoration: none;
-    color: #6a0dad;
 }
 
-footer a:hover {
+.options .forgot-link:hover {
     text-decoration: underline;
+}
+
+/* 버튼 스타일 */
+.login-btn {
+    width: 100%;
+    background-color: #5A20CB; /* 보라색 버튼 */
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #4B1AA3; /* 버튼 호버 색상 */
+}
+
+.skip-btn {
+    width: 100%;
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.skip-btn:hover {
+    background-color: #aaa;
+}
+
+/* 푸터 링크 */
+.footer-links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-links a {
+    color: #5A20CB; /* 보라색 링크 */
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* 푸터 텍스트 */
+.footer-text {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
 }
