@@ -9,9 +9,9 @@
 <body>
     <div class="login-container">
         <h1 class="login-title">UniVerse</h1>
-        <form class="login-form">
-            <input type="text" placeholder="Enter your username" required>
-            <input type="password" placeholder="Enter your password" required>
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Enter your username" id="username" required>
+            <input type="password" placeholder="Enter your password" id="password" required>
             <div class="options">
                 <label>
                     <input type="checkbox"> Remember Me
@@ -19,7 +19,7 @@
                 <a href="#" class="forgot-link">Forgot Username/Password?</a>
             </div>
             <button type="submit" class="login-btn">Login</button>
-            <button type="button" class="signup-btn">Sign Up</button>
+            <button type="button" class="signup-btn" id="skipLogin">Skip Login</button>
         </form>
         <footer class="footer">
             <a href="#">Terms of Service</a> |
@@ -28,5 +28,6 @@
             <p>UniVerse © 2025 - All Rights Reserved</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
