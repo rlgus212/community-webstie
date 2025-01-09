@@ -4,22 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniVerse Main</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main-style.css">
 </head>
 <body>
-    <header class="main-header">
-        <h1>Welcome to UniVerse!</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Categories</a>
-            <a href="#">Profile</a>
-        </nav>
+    <!-- Top Navigation Bar -->
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div class="logo">
+                <h1>UniVerse</h1>
+            </div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#board">Board</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#lectures">Lectures</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+            <div class="top-bar-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
     </header>
-    <main>
-        <p>This is the main page after login or skipping login.</p>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="board">
+            <h2>Board</h2>
+            <p>Explore the latest posts and discussions!</p>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>Plan your semester effectively with our schedule feature.</p>
+        </section>
+        <section id="lectures">
+            <h2>Lectures</h2>
+            <p>Find and rate your courses.</p>
+        </section>
+        <section id="market">
+            <h2>Market</h2>
+            <p>Buy, sell, or trade items with your peers.</p>
+        </section>
+        <section id="jobs">
+            <h2>Jobs</h2>
+            <p>Discover internships and job opportunities.</p>
+        </section>
+        <section id="events">
+            <h2>Events</h2>
+            <p>Stay updated with the latest campus events.</p>
+        </section>
+        <section id="community">
+            <h2>Community</h2>
+            <p>Engage with your peers through our anonymous community board.</p>
+        </section>
     </main>
-    <footer>
-        <p>UniVerse © 2025 - All Rights Reserved</p>
-    </footer>
 </body>
 </html>
