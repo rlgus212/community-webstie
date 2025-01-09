@@ -1,65 +1,72 @@
-/* 전체 스타일 초기화 */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333;
-}
-
-/* 로그인 컨테이너 스타일 */
-.login-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    text-align: center;
+    background-color: #f9f9f9;
 }
 
-.login-container h1 {
-    font-size: 3rem;
+.login-container {
+    text-align: center;
+    width: 400px;
+}
+
+.login-header h1 {
     color: #FF7043;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    gap: 15px;
-}
-
-.login-container input {
+.login-form input {
+    width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-.login-container button {
+.login-form .btn {
+    width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    color: white;
-    background-color: #FF7043;
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.login-container button:hover {
+.login-form .btn {
+    background-color: #FF7043;
+    color: white;
+}
+
+.login-form .btn.secondary {
+    background-color: #ddd;
+    color: #555;
+}
+
+.login-form .btn:hover {
     background-color: #e55e37;
 }
 
-/* 푸터 스타일 */
+.forgot-link {
+    color: #FF7043;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 .footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #FF7043;
-    color: white;
-    font-size: 0.9rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer a {
+    color: #FF7043;
+    text-decoration: none;
+    margin: 0 5px;
 }

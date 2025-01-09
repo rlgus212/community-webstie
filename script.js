@@ -1,15 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.getElementById("loginForm");
-    const skipLogin = document.getElementById("skipLogin");
+document.getElementById('loginButton').addEventListener('click', () => {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    // 로그인 버튼 동작 (현재는 alert로 대체)
-    loginForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Login functionality not implemented yet.");
-    });
+    if (username && password) {
+        alert(`Welcome, ${username}!`);
+        window.location.href = 'main.html'; // Replace with your main page
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
 
-    // Skip Login 버튼 동작
-    skipLogin.addEventListener("click", () => {
-        window.location.href = "main.html"; // main.html로 이동
-    });
+document.getElementById('skipButton').addEventListener('click', () => {
+    window.location.href = 'main.html'; // Replace with your main page
 });

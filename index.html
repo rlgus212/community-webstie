@@ -8,18 +8,27 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>UniVerse</h1>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Enter your username">
-            <input type="password" id="password" placeholder="Enter your password">
-            <button type="submit">Login</button>
-            <button type="button" id="skipLogin">Skip Login</button>
+        <div class="login-header">
+            <h1>UniVerse</h1>
+        </div>
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Enter your username" id="username">
+            <input type="password" placeholder="Enter your password" id="password">
+            <div class="login-options">
+                <label>
+                    <input type="checkbox" id="rememberMe"> Remember Me
+                </label>
+                <a href="#" class="forgot-link">Forgot Username/Password?</a>
+            </div>
+            <button type="button" id="loginButton" class="btn">Login</button>
+            <button type="button" id="skipButton" class="btn secondary">Skip Login</button>
         </form>
+        <div class="footer">
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Contact Us</a>
+        </div>
     </div>
-    <footer class="footer">
-        <p>Terms of Service &nbsp; | &nbsp; Privacy Policy &nbsp; | &nbsp; Contact Us</p>
-        <p>UniVerse © 2025 - All Rights Reserved</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
