@@ -3,20 +3,48 @@ body {
     line-height: 1.6;
     margin: 20px;
     background-color: #f9f9f9;
-  }
-  
-  h1, h2 {
+}
+
+h1, h2 {
     color: #333;
-  }
-  
-  .form {
     margin-bottom: 20px;
-  }
-  
-  .post {
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.post {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
     background-color: #fff;
-  }
-  
+}
