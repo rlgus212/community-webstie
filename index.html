@@ -8,19 +8,19 @@
 </head>
 <body>
     <div class="login-container">
-        <h1 class="logo">UniVerse</h1>
+        <h1 class="login-title">UniVerse</h1>
         <form class="login-form">
-            <input type="text" placeholder="Enter your username" class="input-field">
-            <input type="password" placeholder="Enter your password" class="input-field">
-            <button type="button" class="login-button">Login</button>
+            <input type="text" placeholder="Enter your username" required>
+            <input type="password" placeholder="Enter your password" required>
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#" class="forgot-link">Forgot Username/Password?</a>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <button type="button" class="signup-btn">Sign Up</button>
         </form>
-        <div class="options">
-            <label class="remember-me">
-                <input type="checkbox"> Remember Me
-            </label>
-            <a href="#" class="forgot-link">Forgot Username/Password?</a>
-        </div>
-        <button class="signup-button">Sign Up</button>
         <footer class="footer">
             <a href="#">Terms of Service</a> |
             <a href="#">Privacy Policy</a> |
