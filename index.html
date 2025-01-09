@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-wrapper">
-        <h1 class="login-logo">UniVerse</h1>
-        <form class="login-form" id="loginForm">
-            <input type="text" placeholder="Enter your username" id="username" class="login-input">
-            <input type="password" placeholder="Enter your password" id="password" class="login-input">
-            <div class="login-options">
-                <label class="remember-me">
-                    <input type="checkbox" id="rememberMe"> Remember Me
-                </label>
-                <a href="#" class="forgot-link">Forgot Username/Password?</a>
-            </div>
-            <button type="button" id="loginButton" class="login-btn primary-btn">Login</button>
-            <button type="button" id="skipButton" class="login-btn secondary-btn">Skip Login</button>
+    <div class="login-container">
+        <div class="logo">
+            <h1>UniVerse</h1>
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="Enter your username">
+            <input type="password" placeholder="Enter your password">
+            <button type="submit">Login</button>
         </form>
-        <footer class="login-footer">
-            <a href="#">Terms of Service</a> | 
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Contact Us</a>
+        <div class="options">
+            <div>
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+                <a href="#" class="forgot">Forgot Username/Password?</a>
+            </div>
+        </div>
+        <div class="signup">
+            <button class="signup-btn">Sign Up</button>
+        </div>
+        <footer>
+            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+            <p>UniVerse © 2025 - All Rights Reserved</p>
         </footer>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
