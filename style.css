@@ -5,45 +5,102 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    color: #333;
 }
 
-.navbar {
+/* 헤더 스타일 */
+.header {
     background-color: #FF7043;
     color: white;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
-.nav-links {
+.header .logo h1 {
+    margin: 0;
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links a {
+.navbar a {
     color: white;
     text-decoration: none;
 }
 
+/* 컨테이너 스타일 */
 .container {
     padding: 20px;
 }
 
-.form {
-    margin-bottom: 30px;
+/* 카테고리 섹션 스타일 */
+.categories .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.form label {
+.categories .category-list a {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    background-color: #FF7043;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 실시간 인기 게시물 섹션 */
+.popular-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-posts li {
+    margin-bottom: 10px;
+}
+
+.popular-posts a {
+    text-decoration: none;
     color: #FF7043;
 }
 
-.form input,
-.form textarea {
+.popular-posts a:hover {
+    text-decoration: underline;
+}
+
+/* 광고 섹션 */
+.ad-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ad-section .ad-banner {
+    background-color: #FF7043;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 게시물 작성 섹션 */
+.create-post .form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.create-post .form input,
+.create-post .form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -51,8 +108,8 @@ body {
     border-radius: 5px;
 }
 
-.form button {
-    padding: 10px 20px;
+.create-post .form button {
+    padding: 10px 15px;
     background-color: #FF7043;
     color: white;
     border: none;
@@ -60,33 +117,14 @@ body {
     cursor: pointer;
 }
 
-.form button:hover {
+.create-post .form button:hover {
     background-color: #e55e37;
 }
 
-.post {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-.delete-btn {
-    background-color: #e55e37;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-footer {
+/* 푸터 */
+.footer {
     text-align: center;
+    padding: 10px 0;
     background-color: #FF7043;
     color: white;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }

@@ -7,19 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 네비게이션 바 -->
-    <nav class="navbar">
-        <h1>UniVerse</h1>
-        <ul class="nav-links">
-            <li><a href="#create-post">Create Post</a></li>
-            <li><a href="#posts">Posts</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="logo">
+            <h1>UniVerse</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#popular-posts">Popular Posts</a></li>
+                <li><a href="#create-post">Create Post</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- 메인 컨텐츠 -->
+    <!-- 메인 컨테이너 -->
     <div class="container">
-        <section id="create-post">
+        <!-- 카테고리 섹션 -->
+        <section id="categories" class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <a href="#">Free Talk</a>
+                <a href="#">Campus Life</a>
+                <a href="#">Job & Career</a>
+                <a href="#">Classroom Discussions</a>
+                <a href="#">Events</a>
+                <a href="#">Buy & Sell</a>
+            </div>
+        </section>
+
+        <!-- 실시간 인기 게시물 섹션 -->
+        <section id="popular-posts" class="popular-posts">
+            <h2>Popular Posts</h2>
+            <ul>
+                <li><a href="#">How to ace your exams - Tips and tricks!</a></li>
+                <li><a href="#">Looking for a roommate near campus</a></li>
+                <li><a href="#">Free events happening this weekend!</a></li>
+                <li><a href="#">Selling my old textbooks - DM me</a></li>
+            </ul>
+        </section>
+
+        <!-- 광고 섹션 -->
+        <section class="ad-section">
+            <h2>Featured</h2>
+            <div class="ad-banner">
+                <p>🚀 Join our Career Fair 2025!</p>
+                <p>Connect with top companies and secure your dream job.</p>
+            </div>
+        </section>
+
+        <!-- 게시물 작성 섹션 -->
+        <section id="create-post" class="create-post">
             <h2>Create a Post</h2>
             <div class="form">
                 <form id="postForm">
@@ -33,68 +71,24 @@
                 </form>
             </div>
         </section>
-
-        <section id="posts">
-            <h2>Community Posts</h2>
-            <div id="posts-container"></div>
-        </section>
     </div>
 
     <!-- 푸터 -->
-    <footer>
+    <footer class="footer">
         <p>UniVerse © 2025 - All Rights Reserved</p>
     </footer>
 
     <!-- JavaScript -->
     <script>
         const postForm = document.getElementById('postForm');
-        const postsContainer = document.getElementById('posts-container');
+        const titleInput = document.getElementById('title');
+        const contentInput = document.getElementById('content');
 
-        // Load saved posts
-        const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-        savedPosts.forEach((post, index) => {
-            displayPost(post, index);
-        });
-
-        // Form submission
         postForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            const title = document.getElementById('title').value.trim();
-            const content = document.getElementById('content').value.trim();
-
-            if (!title || !content) {
-                alert('Title and Content cannot be empty!');
-                return;
-            }
-
-            const post = { title, content, timestamp: new Date().toLocaleString() };
-            savedPosts.push(post);
-            localStorage.setItem('posts', JSON.stringify(savedPosts));
-            displayPost(post, savedPosts.length - 1);
-
+            alert(`Title: ${titleInput.value}\nContent: ${contentInput.value}`);
             postForm.reset();
         });
-
-        // Display post
-        function displayPost(post, index) {
-            const postDiv = document.createElement('div');
-            postDiv.className = 'post';
-            postDiv.innerHTML = `
-                <h3>${post.title}</h3>
-                <p>${post.content}</p>
-                <small>${post.timestamp}</small>
-                <button onclick="deletePost(${index})" class="delete-btn">Delete</button>
-            `;
-            postsContainer.prepend(postDiv);
-        }
-
-        // Delete post
-        function deletePost(index) {
-            savedPosts.splice(index, 1);
-            localStorage.setItem('posts', JSON.stringify(savedPosts));
-            postsContainer.innerHTML = '';
-            savedPosts.forEach((post, i) => displayPost(post, i));
-        }
     </script>
 </body>
 </html>
