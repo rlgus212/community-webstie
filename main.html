@@ -3,60 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniVerse Main</title>
+    <title>UniVerse</title>
     <link rel="stylesheet" href="main-style.css">
 </head>
 <body>
-    <!-- 네비게이션 바 -->
     <nav class="navbar">
-        <div class="logo">UniVerse</div>
-        <ul class="nav-links">
-            <li><a href="#board" class="nav-item active" onclick="showPage('board')">Board</a></li>
-            <li><a href="#schedule" class="nav-item" onclick="showPage('schedule')">Schedule</a></li>
-            <li><a href="#lectures" class="nav-item" onclick="showPage('lectures')">Lectures</a></li>
-            <li><a href="#market" class="nav-item" onclick="showPage('market')">Market</a></li>
-            <li><a href="#jobs" class="nav-item" onclick="showPage('jobs')">Jobs</a></li>
-            <li><a href="#events" class="nav-item" onclick="showPage('events')">Events</a></li>
-            <li><a href="#community" class="nav-item" onclick="showPage('community')">Community</a></li>
-        </ul>
-        <div class="auth-links">
-            <a href="login.html" class="login">Login</a>
-            <a href="signup.html" class="signup">Sign Up</a>
-        </div>        
+        <div class="navbar-container">
+            <a href="#" class="logo">UniVerse</a>
+            <div class="nav-links">
+                <a href="#board" class="nav-link active">Board</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#lectures" class="nav-link">Lectures</a>
+                <a href="#market" class="nav-link">Market</a>
+                <a href="#jobs" class="nav-link">Jobs</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#community" class="nav-link">Community</a>
+            </div>
+            <div class="nav-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
     </nav>
-
-    <!-- 페이지 내용 -->
-    <div class="content">
+    <main class="content">
         <section id="board" class="page active">
-            <h2>Board</h2>
+            <h1>Board</h1>
             <p>Connect and communicate with your peers.</p>
         </section>
         <section id="schedule" class="page">
-            <h2>Schedule</h2>
+            <h1>Schedule</h1>
             <p>Organize your classes and manage your time effectively.</p>
         </section>
         <section id="lectures" class="page">
-            <h2>Lectures</h2>
+            <h1>Lectures</h1>
             <p>Find and rate your courses.</p>
         </section>
-        <section id="market" class="page">
-            <h2>Market</h2>
-            <p>Buy, sell, or trade items with other students.</p>
-        </section>
-        <section id="jobs" class="page">
-            <h2>Jobs</h2>
-            <p>Discover internships and job opportunities.</p>
-        </section>
-        <section id="events" class="page">
-            <h2>Events</h2>
-            <p>Stay updated with the latest campus events.</p>
-        </section>
-        <section id="community" class="page">
-            <h2>Community</h2>
-            <p>Engage with your peers through our anonymous community board.</p>
-        </section>
-    </div>
-
-    <script src="main.js"></script>
+        <!-- 다른 페이지 섹션 추가 -->
+    </main>
+    <script src="main-script.js"></script>
 </body>
 </html>

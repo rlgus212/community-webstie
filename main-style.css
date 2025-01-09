@@ -1,62 +1,87 @@
-/* 전체 배경 */
 body {
-    font-family: Arial, sans-serif; /* 로그인 페이지와 동일한 폰트 */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #333;
 }
 
-/* 네비게이션 바 */
 .navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
-.navbar .logo {
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     font-size: 1.5rem;
-    font-weight: bold;
     color: #6a0dad;
+    text-decoration: none;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-.nav-links li a {
+.nav-link {
     text-decoration: none;
-    font-size: 1rem;
     color: #333;
-    padding: 5px 10px;
-    transition: color 0.3s, background-color 0.3s;
+    font-size: 1rem;
 }
 
-.nav-links li a.active {
-    color: #ffffff;
-    background-color: #6a0dad;
-    border-radius: 5px;
-}
-
-.nav-links li a:hover {
+.nav-link:hover {
     color: #6a0dad;
 }
 
-/* 페이지 내용 */
+.nav-link.active {
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #6a0dad;
+    border: 1px solid #6a0dad;
+}
+
+.signup-btn {
+    background-color: #6a0dad;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #5e0099;
+}
+
 .content {
-    margin-top: 80px; /* 네비게이션 바 높이 만큼 */
-    padding: 20px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 20px;
 }
 
 .page {
@@ -65,53 +90,4 @@ body {
 
 .page.active {
     display: block;
-}
-
-.content h2 {
-    color: #6a0dad;
-    margin-bottom: 10px;
-}
-
-.content p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-/* 로그인/회원가입 버튼 */
-.auth-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.auth-links a {
-    text-decoration: none;
-    padding: 5px 15px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-}
-
-.auth-links .login {
-    background-color: #ffffff;
-    color: #6a0dad;
-    border: 2px solid #6a0dad;
-    text-align: center;
-}
-
-.auth-links .login:hover {
-    background-color: #6a0dad;
-    color: #ffffff;
-}
-
-.auth-links .signup {
-    background-color: #6a0dad;
-    color: #ffffff;
-    border: 2px solid #6a0dad;
-    text-align: center;
-}
-
-.auth-links .signup:hover {
-    background-color: #ffffff;
-    color: #6a0dad;
 }
