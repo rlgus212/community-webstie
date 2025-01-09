@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px; /* px 추가 */
+    padding: 10px 250px; /* px 추가 */
     border-bottom: 1px solid #ccc;
     z-index: 1000;
     box-sizing: border-box; /* 패딩 포함 */
@@ -56,10 +56,10 @@
 .nav-item.active::after {
     content: '';
     position: absolute;
-    bottom: -5px; /* 보라색 줄을 항목 바로 아래에 위치 */
+    bottom: -20px; /* 보라색 줄을 항목 바로 아래에 위치 */
     left: 0;
     right: 0;
-    height: 3px;
+    height: 5px;
     background-color: #6a0dad;
 }
 
@@ -71,7 +71,7 @@
 
 .login-btn, .signup-btn {
     border: none;
-    padding: 5px 15px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-family: Arial, sans-serif;
@@ -104,6 +104,7 @@
     max-width: 1200px; /* 최대 폭 설정 */
     margin-left: auto;
     margin-right: auto; /* 수평 가운데 정렬 */
+    font-family: Arial, sans-serif;
 }
 
 .page.active {

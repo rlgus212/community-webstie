@@ -15,30 +15,31 @@ body {
 .login-container {
     text-align: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 370px;
 }
 
 /* 타이틀 스타일 */
 .login-title {
     font-size: 2rem;
     color: #6a0dad; /* 강렬한 보라색 */
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* 폼 스타일 */
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* 입력 필드 */
 .login-form input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
+    background-color: #f4f4f4;
+    padding: 14px;
+    font-size: 0.9rem;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    text-align: left;
 }
 
 /* 버튼 스타일 */
@@ -46,9 +47,9 @@ body {
     background-color: #6a0dad;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 14px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -57,17 +58,11 @@ body {
 }
 
 .signup-btn {
-    background-color: #ccc;
-    color: black;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
+    color: #6b6b6b;
+    font-size: 0.9rem;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-.signup-btn:hover {
-    background-color: #bbb;
+    padding-top: 20px;
 }
 
 /* 옵션 */
@@ -76,12 +71,14 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
+    color: #969696;
+    padding-top: 5px;
 }
 
 /* 링크 스타일 */
 .forgot-link {
     color: #6a0dad;
-    text-decoration: none;
+    font-size: 0.8rem;
 }
 
 .forgot-link:hover {
@@ -90,7 +87,7 @@ body {
 
 /* 푸터 스타일 */
 .footer {
-    margin-top: 20px;
+    margin-top: 90px;
     font-size: 0.8rem;
     color: #666;
 }

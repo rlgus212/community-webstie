@@ -10,6 +10,6 @@ document.getElementById('loginForm').addEventListener('submit', (event) => {
 });
 
 // "Skip Login" 버튼 클릭 이벤트
-document.getElementById('skipLogin').addEventListener('click', () => {
+document.getElementById('signup').addEventListener('click', () => {
     window.location.href = 'main.html'; // 로그인 없이 메인 페이지로 이동
 });
