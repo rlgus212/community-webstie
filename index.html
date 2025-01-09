@@ -7,27 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <h1>UniVerse</h1>
-        </div>
+    <div class="login-wrapper">
+        <h1 class="login-logo">UniVerse</h1>
         <form class="login-form" id="loginForm">
-            <input type="text" placeholder="Enter your username" id="username">
-            <input type="password" placeholder="Enter your password" id="password">
+            <input type="text" placeholder="Enter your username" id="username" class="login-input">
+            <input type="password" placeholder="Enter your password" id="password" class="login-input">
             <div class="login-options">
-                <label>
+                <label class="remember-me">
                     <input type="checkbox" id="rememberMe"> Remember Me
                 </label>
                 <a href="#" class="forgot-link">Forgot Username/Password?</a>
             </div>
-            <button type="button" id="loginButton" class="btn">Login</button>
-            <button type="button" id="skipButton" class="btn secondary">Skip Login</button>
+            <button type="button" id="loginButton" class="login-btn primary-btn">Login</button>
+            <button type="button" id="skipButton" class="login-btn secondary-btn">Skip Login</button>
         </form>
-        <div class="footer">
+        <footer class="login-footer">
             <a href="#">Terms of Service</a> | 
             <a href="#">Privacy Policy</a> | 
             <a href="#">Contact Us</a>
-        </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,67 +7,101 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* 밝은 배경 */
+    color: #333;
 }
 
-.login-container {
+/* 로그인 래퍼 */
+.login-wrapper {
     text-align: center;
-    width: 400px;
+    width: 300px;
 }
 
-.login-header h1 {
-    color: #FF7043;
+/* 로고 스타일 */
+.login-logo {
+    color: #6A0DAD; /* 강렬한 보라색 */
     font-size: 36px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.login-form input {
+/* 입력 폼 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-.login-form .btn {
-    width: 100%;
-    padding: 10px;
+/* 옵션 스타일 */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
     margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
-.login-form .btn {
-    background-color: #FF7043;
-    color: white;
-}
-
-.login-form .btn.secondary {
-    background-color: #ddd;
-    color: #555;
-}
-
-.login-form .btn:hover {
-    background-color: #e55e37;
+.remember-me input {
+    margin-right: 5px;
 }
 
 .forgot-link {
-    color: #FF7043;
+    color: #6A0DAD;
     text-decoration: none;
-    font-size: 14px;
 }
 
-.footer {
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* 버튼 스타일 */
+.login-btn {
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background-color: #6A0DAD;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #5A0891;
+}
+
+.secondary-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #d6d6d6;
+}
+
+/* 푸터 */
+.login-footer {
+    font-size: 14px;
     margin-top: 20px;
-    font-size: 14px;
-    color: #555;
+    color: #666;
 }
 
-.footer a {
-    color: #FF7043;
+.login-footer a {
+    color: #6A0DAD;
     text-decoration: none;
-    margin: 0 5px;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
 }
