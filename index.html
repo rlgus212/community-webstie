@@ -3,62 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniVerse Main</title>
-    <link rel="stylesheet" href="main-style.css">
+    <title>UniVerse Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">
-            <h1 style="color: #6a0dad;">UniVerse</h1>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#board" class="active">Board</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#lectures">Lectures</a></li>
-                <li><a href="#market">Market</a></li>
-                <li><a href="#jobs">Jobs</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#community">Community</a></li>
-            </ul>
-        </nav>
-        <div class="auth-buttons">
-            <button class="login-btn">Login</button>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-    </header>
-
-    <!-- Content -->
-    <main>
-        <section id="board">
-            <h2>Board</h2>
-            <p>Connect and communicate with your peers.</p>
-        </section>
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <p>Organize your classes and manage your time effectively.</p>
-        </section>
-        <section id="lectures">
-            <h2>Lectures</h2>
-            <p>Find and rate your courses.</p>
-        </section>
-        <section id="market">
-            <h2>Market</h2>
-            <p>Buy, sell, or trade items with other students.</p>
-        </section>
-        <section id="jobs">
-            <h2>Jobs</h2>
-            <p>Discover internships and job opportunities.</p>
-        </section>
-        <section id="events">
-            <h2>Events</h2>
-            <p>Stay updated with the latest campus events.</p>
-        </section>
-        <section id="community">
-            <h2>Community</h2>
-            <p>Engage with your peers through our anonymous community board.</p>
-        </section>
-    </main>
+    <div class="login-container">
+        <h1 class="login-title">UniVerse</h1>
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Enter your username" id="username" required>
+            <input type="password" placeholder="Enter your password" id="password" required>
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#" class="forgot-link">Forgot Username/Password?</a>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <button type="button" class="signup-btn" id="skipLogin">Skip Login</button>
+        </form>
+        <footer class="footer">
+            <a href="#">Terms of Service</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Contact Us</a>
+            <p>UniVerse © 2025 - All Rights Reserved</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
