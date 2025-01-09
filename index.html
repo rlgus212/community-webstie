@@ -3,39 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anonymous Community</title>
+    <title>Anonymous Community - UniVerse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Anonymous Community</h1>
-    <p>This is our first step towards building something amazing!</p>
-    
-    <h2>Create a Post</h2>
-    <div class="form">
-        <form id="postForm">
-            <label for="title">Title</label>
-            <input type="text" id="title" placeholder="Enter the title">
-            
-            <label for="content">Content</label>
-            <textarea id="content" placeholder="Enter the content"></textarea>
-            
-            <button type="submit">Post</button>
-        </form>
+    <!-- 네비게이션 바 -->
+    <nav style="background-color: #FF7043; color: white; padding: 10px; text-align: center;">
+        <h1>UniVerse</h1>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="container">
+        <h1>Welcome to the Anonymous Community</h1>
+        <p>This is our first step towards building something amazing!</p>
+        
+        <!-- 글 작성 폼 -->
+        <h2>Create a Post</h2>
+        <div class="form">
+            <form id="postForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter the title">
+                
+                <label for="content">Content</label>
+                <textarea id="content" placeholder="Enter the content"></textarea>
+                
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- 글 목록 -->
+        <h2>Posts</h2>
+        <div id="posts"></div>
     </div>
 
-    <h2>Posts</h2>
-    <div id="posts"></div>
-
+    <!-- JavaScript -->
     <script>
         const postForm = document.getElementById('postForm');
         const postsDiv = document.getElementById('posts');
 
         // Load saved posts from localStorage
         const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-        savedPosts.forEach(post => {
+        savedPosts.forEach((post, index) => {
             const postDiv = document.createElement('div');
             postDiv.className = 'post';
-            postDiv.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p>`;
+            postDiv.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.content}</p>
+                <button onclick="deletePost(${index})" style="background-color: #FF7043; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Delete</button>
+            `;
             postsDiv.appendChild(postDiv);
         });
 
@@ -57,11 +72,22 @@
 
             const postDiv = document.createElement('div');
             postDiv.className = 'post';
-            postDiv.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+            postDiv.innerHTML = `
+                <h3>${title}</h3>
+                <p>${content}</p>
+                <button onclick="deletePost(${savedPosts.length - 1})" style="background-color: #FF7043; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Delete</button>
+            `;
             postsDiv.prepend(postDiv);
 
             postForm.reset();
         });
+
+        // Delete a post
+        function deletePost(index) {
+            savedPosts.splice(index, 1);
+            localStorage.setItem('posts', JSON.stringify(savedPosts));
+            window.location.reload(); // Refresh to update the UI
+        }
     </script>
 </body>
 </html>
