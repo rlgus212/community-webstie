@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
+    <div class="login-page">
+        <header class="login-header">
             <h1 class="logo">UniVerse</h1>
+        </header>
+        <main class="login-form">
             <form>
-                <div class="input-group">
-                    <input type="text" placeholder="Username">
-                </div>
-                <div class="input-group">
-                    <input type="password" placeholder="Password">
-                </div>
-                <button type="submit" class="login-btn">Login</button>
-                <button type="button" class="skip-btn">Skip Login</button>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="login-button">Login</button>
+                <button type="button" class="signup-button">Sign Up</button>
             </form>
-            <div class="links">
+            <div class="help-links">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
                 <a href="#">Forgot Username/Password?</a>
-                <a href="#">Sign Up</a>
             </div>
-            <footer>
-                <p>Terms of Service | Privacy Policy | Contact Us</p>
-                <p>© 2025 UniVerse</p>
-            </footer>
-        </div>
+        </main>
+        <footer class="login-footer">
+            <p>Terms of Service | Privacy Policy | Contact Us</p>
+            <p>UniVerse © 2025 - All Rights Reserved</p>
+        </footer>
     </div>
 </body>
 </html>
