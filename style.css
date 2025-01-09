@@ -30,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px; /* Add spacing between form and options */
 }
 
 /* 입력 필드 */
@@ -60,19 +61,55 @@ body {
 .signup-btn {
     color: #6b6b6b;
     font-size: 0.9rem;
-    border-radius: 10px;
     cursor: pointer;
-    padding-top: 20px;
+    margin-top: 20px; /* Add spacing from options */
+    display: block; /* Ensures it stays on a new line */
+    text-align: center; /* Center-align the text */
 }
 
 /* 옵션 */
 .options {
     display: flex;
+    align-items: center; /* Vertically aligns the checkbox and text */
     justify-content: space-between;
-    align-items: center;
     font-size: 0.9rem;
     color: #969696;
-    padding-top: 5px;
+    margin-top: 5px; /* Adjust spacing from the form */
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* For Safari */
+    width: 15px; /* Ensure width */
+    height: 15px; /* Ensure height */
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer;
+    background-color: #fff;
+    margin-right: 0px; /* Reduce space between checkbox and label */
+    margin-left: 5px;
+    padding: 0;
+    position: relative;
+}
+
+/* Checked state */
+input[type="checkbox"]:checked {
+    background-color: #6a0dad;
+    border-color: #6a0dad;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label [for="remember-me"] {
+    text-align: left;
 }
 
 /* 링크 스타일 */
@@ -87,7 +124,7 @@ body {
 
 /* 푸터 스타일 */
 .footer {
-    margin-top: 90px;
+    margin-top: 50px;
     font-size: 0.8rem;
     color: #666;
 }
