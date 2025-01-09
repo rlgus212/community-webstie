@@ -1,45 +1,30 @@
 function navigate(pageId) {
-    // Hide all pages
+    // 모든 페이지 숨기기
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
 
-    // Show the selected page
-    const targetPage = document.getElementById(pageId);
-    if (targetPage) {
-        targetPage.classList.add('active');
-    } else {
-        console.error(`Page with ID "${pageId}" not found.`);
-    }
+    // 선택된 페이지 보이기
+    document.getElementById(pageId).classList.add('active');
 
-    // Update navigation link styles
+    // 모든 네비게이션 항목 스타일 초기화
     document.querySelectorAll('.nav-item').forEach(link => {
         link.classList.remove('active');
     });
 
-    // Set active link
-    const activeLink = document.querySelector(`.nav-item[data-target="${pageId}"]`);
-    if (activeLink) {
-        activeLink.classList.add('active');
-    } else {
-        console.error(`Navigation link for page ID "${pageId}" not found.`);
-    }
+    // 현재 활성화된 네비게이션 항목 스타일 적용
+    document.querySelector(`.nav-item[data-target="${pageId}"]`).classList.add('active');
 }
 
-// Event listener for navigation links
+// 네비게이션 클릭 이벤트 등록
 document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', event => {
+    item.addEventListener('click', () => {
         const pageId = item.getAttribute('data-target');
-        if (pageId) {
-            navigate(pageId);
-        } else {
-            console.error("Navigation link missing 'data-target' attribute.");
-        }
+        navigate(pageId);
     });
 });
 
-// Set the default active page on load
+// 기본 페이지 로드 시 초기화
 window.addEventListener('DOMContentLoaded', () => {
-    const defaultPage = 'board'; // Set your default page ID here
-    navigate(defaultPage);
+    navigate('board');
 });

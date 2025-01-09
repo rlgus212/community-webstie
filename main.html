@@ -3,56 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main-style.css">
     <title>UniVerse</title>
-    <link rel="stylesheet" href="main-style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <header class="nav-bar">
         <div class="logo">UniVerse</div>
-        <ul class="nav-links">
-            <li class="nav-item" data-target="board">Board</li>
-            <li class="nav-item" data-target="schedule">Schedule</li>
-            <li class="nav-item" data-target="lectures">Lectures</li>
-            <li class="nav-item" data-target="market">Market</li>
-            <li class="nav-item" data-target="jobs">Jobs</li>
-            <li class="nav-item" data-target="events">Events</li>
-            <li class="nav-item" data-target="community">Community</li>
-        </ul>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item" data-target="board">Board</li>
+                <li class="nav-item" data-target="schedule">Schedule</li>
+                <li class="nav-item" data-target="lectures">Lectures</li>
+                <li class="nav-item" data-target="market">Market</li>
+                <li class="nav-item" data-target="jobs">Jobs</li>
+                <li class="nav-item" data-target="events">Events</li>
+                <li class="nav-item" data-target="community">Community</li>
+            </ul>
+        </nav>
         <div class="auth-buttons">
             <button class="login-btn">Login</button>
             <button class="signup-btn">Sign Up</button>
         </div>
-    </nav>
-    <div class="content">
-        <div id="board" class="page active">
-            <h1>Board</h1>
-            <p>Connect and communicate with your peers.</p>
-        </div>
-        <div id="schedule" class="page">
-            <h1>Schedule</h1>
-            <p>Organize your classes and manage your time effectively.</p>
-        </div>
-        <div id="lectures" class="page">
-            <h1>Lectures</h1>
-            <p>Find and rate your courses.</p>
-        </div>
-        <div id="market" class="page">
-            <h1>Market</h1>
-            <p>Buy, sell, or trade items with other students.</p>
-        </div>
-        <div id="jobs" class="page">
-            <h1>Jobs</h1>
-            <p>Discover internships and job opportunities.</p>
-        </div>
-        <div id="events" class="page">
-            <h1>Events</h1>
-            <p>Stay updated with the latest campus events.</p>
-        </div>
-        <div id="community" class="page">
-            <h1>Community</h1>
-            <p>Engage with your peers through our anonymous community board.</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    </header>
+
+    <main>
+        <section id="board" class="page active">Board Content</section>
+        <section id="schedule" class="page">Schedule Content</section>
+        <section id="lectures" class="page">Lectures Content</section>
+        <section id="market" class="page">Market Content</section>
+        <section id="jobs" class="page">Jobs Content</section>
+        <section id="events" class="page">Events Content</section>
+        <section id="community" class="page">Community Content</section>
+    </main>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
