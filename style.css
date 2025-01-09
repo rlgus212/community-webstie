@@ -40,6 +40,52 @@ body {
     padding: 20px;
 }
 
+/* 로그인 섹션 스타일 */
+.login-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2 {
+    text-align: center;
+    color: #FF7043;
+    margin-bottom: 20px;
+}
+
+.login-section label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7043;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-section button:hover {
+    background-color: #e55e37;
+}
+
 /* 카테고리 섹션 스타일 */
 .categories .category-list {
     display: flex;

@@ -21,6 +21,20 @@
         </nav>
     </header>
 
+    <!-- 로그인 섹션 -->
+    <section id="login-section" class="login-section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
     <!-- 메인 컨테이너 -->
     <div class="container">
         <!-- 카테고리 섹션 -->
@@ -88,6 +102,12 @@
             event.preventDefault();
             alert(`Title: ${titleInput.value}\nContent: ${contentInput.value}`);
             postForm.reset();
+        });
+
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert("Login successful!");
         });
     </script>
 </body>
