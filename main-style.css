@@ -110,3 +110,72 @@
 .page.active {
     display: block;
 }
+
+/* 대시보드 */
+#board {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.search-bar {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.overview-item {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.overview-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.overview-item p {
+    font-size: 1.5rem;
+    margin: 5px 0 0;
+}
+
+.recent-activities {
+    margin-top: 20px;
+}
+
+.recent-activities h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
